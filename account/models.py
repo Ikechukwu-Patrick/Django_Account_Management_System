@@ -1,12 +1,14 @@
+from django.contrib.auth.models import User, AbstractUser
 from django.db import models
+from django.conf import settings
 from .utils import generate_account_number
 from .validators import validate_pin
 
 
 # Create your models here.
 
-
 class Account(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
     account_number = models.CharField(max_length=10,
                                       default=generate_account_number, unique=True, primary_key=True)
     first_name = models.CharField(max_length=255)
@@ -17,15 +19,12 @@ class Account(models.Model):
         ('SAV', 'SAVING'),
         ('CUR', 'CURRENT'),
         ('DOM', 'DOMICILIARY'),
-        
 
     ]
     account_type = models.CharField(max_length=3, choices=ACCOUNT_TYPES, default='s')
 
     def __str__(self):
         return f"{self.first_name} {self.second_name} {self.account_type}{self.account_number}"
-
-
 
 
 class Transaction(models.Model):
