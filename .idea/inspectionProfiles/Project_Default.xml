@@ -1,0 +1,28 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N801" />
+          <option value="N803" />
+          <option value="N802" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="list.__sub__" />
+          <option value="PrimaryPackages.Phonebook.Phonebook.__getitem__" />
+          <option value="PrimaryPackages.test_Phonebook.assertEqual" />
+          <option value="self.assertEquals" />
+          <option value="self.phonebook.items" />
+          <option value="Bank_App.Bank.Python_Corn" />
+          <option value="Python_Corn_Flakes.Tuple_My_Name.field_names" />
+          <option value="OOP.accountimport" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
